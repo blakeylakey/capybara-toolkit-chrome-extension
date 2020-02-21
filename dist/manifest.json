@@ -2,7 +2,12 @@
   "name": "Capybara Amazon Listing Tool",
   "version": "0.0.0",
   "description": "User Capybara's data to instantly analyze and understand any Amazon listing.",
-  "permissions": ["activeTab", "declarativeContent", "http://www.amazon.com/*", "https://www.amazon.com/*"],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "http://www.amazon.com/*",
+    "https://www.amazon.com/*"
+  ],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -10,22 +15,24 @@
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
+      "16": "images/capybara.png",
+      "32": "images/capybara.png",
+      "48": "images/capybara.png",
+      "128": "images/capybara.png"
     }
   },
-  "web_accessible_resources": ["*.jpg","*.JPG", "*.png", "*.PNG"],
-  "content_scripts": [{
-    "css":["css/capybara.css", "css/styles.css"],
-    "matches":["http://www.amazon.com/*", "https://www.amazon.com/*"]
-  }],
+  "web_accessible_resources": ["*.jpg", "*.JPG", "*.png", "*.PNG"],
+  "content_scripts": [
+    {
+      "css": ["css/capybara.css", "css/styles.css"],
+      "matches": ["http://www.amazon.com/*", "https://www.amazon.com/*"]
+    }
+  ],
   "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
+    "16": "images/capybara.png",
+    "32": "images/capybara.png",
+    "48": "images/capybara.png",
+    "128": "images/capybara.png"
   },
   "manifest_version": 2
 }
