@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 import PopUp from "./components/pop_up";
 
 import "./css/styles.scss";
-import "./css/capybara.scss";
 
 class CapybaraExtension extends React.Component {
   render() {

@@ -1,119 +1,149 @@
-#capybara__pop_up {
+$background-color: #232f3e;
+$background-color-lighter: #2d3d52;
+$main-color: #ff9900;
+$primary-color: #ffffff;
+$secondary-color: #999999;
+
+///////////////////
+// POP UP TAB STUFF
+#capybara-extension--pop-up-tab--container {
   position: fixed;
   bottom: 0;
   left: 80px;
-  background-color: #2a2a3b;
-  //color: #BB86FC;
-  color: #ff0000;
+  background-color: $background-color;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
   padding-left: 14px;
   padding-right: 14px;
-  padding-top: 8px;
+  padding-top: 10px;
   padding-bottom: 8px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-#capybara__pop_up:hover {
-  cursor: pointer;
-}
-
-#capybara__chevron_up {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.box {
+///////////////////////////
+// MAIN EXTENSION CONTAINER
+#capybara-extension--extension--container {
+  position: fixed;
   height: 400px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: $background-color;
+  z-index: 10000;
 }
 
 .hidden {
-  height: 0px;
+  height: 0 !important;
 }
 
-#capybara__informational-box {
-  position: fixed;
-  z-index: 10000;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-  background-color: #2a2a3b;
-  transition: all 1s ease-in-out;
-}
-
-#capybara__information-box-nav {
-  padding-left: 48px;
-  padding-right: 48px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  position: relative;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: #191927;
-}
-
-#capybara__information-box-nav-brand {
-  color: #bb86fc;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-right: 16px;
-}
-
-.row {
+////////////////////////
+// MAIN EXTENSION NAVBAR
+#capybara-extension--navbar--wrapper {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  justify-content: space-between;
 }
 
-.col-3 {
-  flex: 0 0 33%;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 33%;
-  max-width: 33%;
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+#capybara-extension--navbar {
+  display: inline-block;
+  text-align: right;
 }
 
-.card {
-  position: relative;
+.capybara-extension--navbar--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.capybara-extension--navbar--link {
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-clip: border-box;
-  border-radius: 0.25rem;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 14px;
+  padding-left: 14px;
+  color: $primary-color;
+  font-size: 22px;
+  border-bottom-color: $main-color;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+
+  &.exit {
+    border: 2px solid $secondary-color;
+    border-radius: 15px;
+  }
+
+  &.exit:hover {
+    background-color: $background-color-lighter;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.capybara-extension--navbar--logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 14px;
+  padding-left: 14px;
+  color: $primary-color;
+  font-size: 22px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  a {
+    color: $main-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $main-color;
+    text-decoration: none;
+  }
+}
+
+/////////////////////////
+// MAIN EXTENSION CONTENT
+.capybara-extension--content--container {
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.card-header {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: #191927;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  border-color: transparent;
+.capybara-extension--content--col {
+  height: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: $primary-color;
+  display: inline-block;
 }
 
-.card-title {
-  margin-bottom: 12px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: lightgrey;
+.capybara-extension--content--col-3 {
+  width: 32%;
 }
 
-.card-body {
-  flex: 1 1 auto;
-  padding: 20px;
+.capybara-extension--content--col-9 {
+  width: 66%;
 }
