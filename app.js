@@ -3,22 +3,28 @@ import ReactDOM from "react-dom";
 
 import PopUp from "./components/pop_up";
 
+import "./css/styles.scss";
+import "./css/capybara.scss";
+
 class CapybaraExtension extends React.Component {
-    render() {
-        return(
-            <PopUp />
-        );
-    }
+  render() {
+    return <PopUp />;
+  }
 }
 
-window.addEventListener('load', () => {app()});
+window.addEventListener("load", () => {
+  app();
+});
 
 const app = () => {
-    if (!document.getElementById('capybara-extension-container')) {
-        let container = document.createElement('div');
-        container.setAttribute('id', 'capybara-extension-container');
+  if (!document.getElementById("capybara-extension-container")) {
+    let container = document.createElement("div");
+    container.setAttribute("id", "capybara-extension-container");
 
-        document.body.appendChild(container);
-    }
-    ReactDOM.render(<CapybaraExtension />, document.getElementById('capybara-extension-container'));
-}
+    document.body.appendChild(container);
+  }
+  ReactDOM.render(
+    <CapybaraExtension />,
+    document.getElementById("capybara-extension-container")
+  );
+};

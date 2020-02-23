@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "dev": "webpack -d --mode development --watch",
-    "build-prod": "webpack -p --mode production",
+    "build": "webpack -p --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,8 +18,10 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^3.4.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.1",
-    "webpack": "^4.30.0",
+    "webpack": "^4.41.6",
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
@@ -29,6 +31,7 @@
     "bootstrap": "^4.4.1",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.16",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "style-loader": "^1.1.3"
   }
 }

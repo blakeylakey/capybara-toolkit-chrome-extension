@@ -24,7 +24,7 @@
   "web_accessible_resources": ["*.jpg", "*.JPG", "*.png", "*.PNG"],
   "content_scripts": [
     {
-      "css": ["css/capybara.css", "css/styles.css"],
+      "js": ["app.js"],
       "matches": ["http://www.amazon.com/*", "https://www.amazon.com/*"]
     }
   ],
