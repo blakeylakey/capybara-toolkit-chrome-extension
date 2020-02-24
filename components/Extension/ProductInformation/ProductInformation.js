@@ -10,6 +10,7 @@ const ProductInformation = () => {
     setProductInformation(scrapedInformation);
   };
   useEffect(scrapeInformation, [productInformation.pageTitle]);
+
   return (
     <>
       <ProductInformationCat

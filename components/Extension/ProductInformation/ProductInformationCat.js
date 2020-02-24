@@ -11,7 +11,11 @@ const ProductInformationCat = ({ title, elements }) => {
   };
   return (
     <>
-      <ProductInformationHead title={title} handler={elementsHandler} />
+      <ProductInformationHead
+        title={title}
+        handler={elementsHandler}
+        open={openElements}
+      />
       {Object.keys(elements).map((key, idx) => {
         return (
           <ProductInformationEl

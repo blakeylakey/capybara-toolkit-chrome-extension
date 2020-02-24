@@ -132,7 +132,8 @@ $secondary-color-lighter: #c5c5c5;
   flex-direction: row;
   justify-content: space-around;
   flex-grow: 1;
-}
+  max-height: 331px;
+} // NEED TO FIX MAX HIEGHT HERE
 
 .capybara-extension--content--col {
   margin-top: 8px;
@@ -141,6 +142,7 @@ $secondary-color-lighter: #c5c5c5;
   margin-right: 6px;
   background-color: $primary-color;
   display: inline-block;
+  overflow: scroll;
 }
 
 .capybara-extension--content--col-3 {
@@ -193,4 +195,58 @@ $secondary-color-lighter: #c5c5c5;
 
 .product-information-no-display {
   display: none !important;
+}
+
+//////////////////////////////////
+// MAIN EXTENSION RELATED PRODUCTS
+#capybara-extension--related-products--table {
+  table-layout: fixed;
+}
+
+.capybara-extension--related-products--table-header {
+  background-color: $secondary-color-lighter;
+  font-size: 16px;
+  color: #000000;
+
+  th {
+    border-bottom-style: solid;
+    border-bottom-color: $secondary-color;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-color: $secondary-color;
+    border-right-width: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+.capybara-extension--related-products--table-row {
+  &:hover {
+    background-color: rgb(241, 241, 241);
+  }
+
+  td {
+    border-bottom-style: solid;
+    border-bottom-color: $secondary-color;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-color: $secondary-color;
+    border-right-width: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: $secondary-color-lighter;
+    }
+  }
+}
+
+.td-focused {
+  white-space: normal !important;
 }

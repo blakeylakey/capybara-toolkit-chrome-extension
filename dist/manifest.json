@@ -6,7 +6,9 @@
     "activeTab",
     "declarativeContent",
     "http://www.amazon.com/*",
-    "https://www.amazon.com/*"
+    "https://www.amazon.com/*",
+    "https://capybara-toolkit.appspot.com/*",
+    "http://localhost:3001/*"
   ],
   "background": {
     "scripts": ["background.js"],

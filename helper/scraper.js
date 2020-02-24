@@ -6,7 +6,8 @@ function scrape() {
     cats,
     productDetails,
     sellerRank,
-    category;
+    category,
+    asin;
 
   // Product Title
   try {
@@ -50,6 +51,8 @@ function scrape() {
           .forEach(cat => {
             cats.push(cat.replace(/ *\([^)]*\) */g, "").split(" in "));
           });
+      } else if (el.querySelector("th").innerText === "ASIN") {
+        asin = el.querySelector("td").innerText.trim();
       }
     });
     sellerRank = cats[0][0];
@@ -58,6 +61,7 @@ function scrape() {
     bsr = [];
     sellerRank = "";
     category = "";
+    asin = "";
   }
 
   return {
@@ -65,7 +69,8 @@ function scrape() {
     "Product Review Score": reviewScore,
     "Product Review Count": reviewCount,
     "Best Seller's Rank": sellerRank,
-    Category: category
+    Category: category,
+    ASIN: asin
   };
 }
 
