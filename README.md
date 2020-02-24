@@ -2,6 +2,12 @@
 
 Chrome extension that goes along with the Capybara toolkit app. Made with React.js
 
+## Screenshot
+
+Current screenshot:
+
+![screenshot](./screenshot.png?raw=true)
+
 ## Installation
 
 Enable developer options in chrome and point to the dist folder.
