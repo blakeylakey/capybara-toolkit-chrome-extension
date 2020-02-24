@@ -18,8 +18,6 @@ const RelatedProducts = () => {
     event.target.classList.add("td-focused");
   };
 
-  console.log(relatedProducts);
-
   const headers = [
     { value: "ID", width: "40" },
     { value: "ASIN", width: "130" },

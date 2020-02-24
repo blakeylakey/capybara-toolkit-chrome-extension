@@ -4,7 +4,6 @@ import RelatedProductsRow from "./RelatedProductsRow";
 const RelatedProductsContent = ({ content, handler }) => (
   <>
     {content.map((element, idx) => {
-      console.log(element);
       let formattedResults = {
         id: element.id || "",
         asin: element.asin || "",

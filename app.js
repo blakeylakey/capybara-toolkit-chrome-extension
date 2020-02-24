@@ -1,13 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import rootReducer from "./reducers";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 import PopUp from "./components/pop_up";
-
 import "./css/styles.scss";
+
+const store = createStore(rootReducer);
 
 class CapybaraExtension extends React.Component {
   render() {
-    return <PopUp />;
+    return (
+      <Provider store={store}>
+        <PopUp />
+      </Provider>
+    );
   }
 }
 
