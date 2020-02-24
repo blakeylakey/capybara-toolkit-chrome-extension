@@ -8,7 +8,13 @@ Enable developer options in chrome and point to the dist folder.
 
 ## Status
 
-Big time a work in progress, Amazon's styling is frustrating to work with so most of everything has to be done manually and without a css framework, which is annoying.
+Work in progress.
+
+Biggest need is for an actually good keyword extractor. The current web app version is RAKE, which sucks. Need to do some research into a good way of extracting keyphrases and ranking keyphrases for amazon listings. Would be nice if I could also get search volume estimates, which would then make it possible to rank keywords on difficulty.
+
+Also needs a product prediction section, for estimated sales, revenue, and profits.
+
+Could use a lot more features presently available on web app version, like the keyword/phrase seasonality, and related keywords. Maybe in the future?
 
 ## License
 
