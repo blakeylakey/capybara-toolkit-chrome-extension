@@ -6,7 +6,7 @@ Chrome extension that goes along with the Capybara toolkit app. Made with React.
 
 Current screenshot:
 
-![screenshot](./screenshot.png?raw=true)
+![screenshot](https://github.com/blakeylakey/capybara-toolkit-chrome-extension/blob/master/screenshot.PNG?raw=true)
 
 ## Installation
 
